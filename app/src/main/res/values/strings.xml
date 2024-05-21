@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">StatusGlanceAndroid</string>
+    <string name="battery_info_label">Battery Info</string>
+    <string name="network_info_label">Network Info</string>
 </resources>

@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#3F51B5</color> <!-- Remplacez #3F51B5 par votre couleur préférée -->
+
+    <!-- Définition des autres couleurs -->
+    <color name="colorPrimaryDark">#303F9F</color> <!-- Remplacez #303F9F par votre couleur préférée -->
+    <color name="colorAccent">#FF4081</color>
 </resources>
