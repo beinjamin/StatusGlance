@@ -1,7 +1,10 @@
 package com.jaures.statusglanceandroid;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.os.BatteryManager;
 import android.os.Bundle;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
@@ -54,5 +57,17 @@ public class MainActivity extends AppCompatActivity {
         IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
         registerReceiver(new BatteryBroadcastReceiver(), filter);
     }
-    
+
+    private class BatteryBroadcastReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            int level = intent.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+            int scale = intent.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+            int batteryPercent = (int) ((level / (float) scale) * 100);
+            String batteryLabel = getString(R.string.battery_info_label);
+            String batteryInfo = batteryLabel + ": " + batteryPercent + "%";
+            floatingWidgetView.setBatteryInfo(batteryInfo);
+        }
+    }
+
 }
