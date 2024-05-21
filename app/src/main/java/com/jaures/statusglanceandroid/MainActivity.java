@@ -19,5 +19,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        floatingWidgetView = findViewById(R.id.floatingWidgetView);
+        showDateButton = findViewById(R.id.showDateButton);
+        toggleThemeButton = findViewById(R.id.toggleThemeButton);
     }
 }
