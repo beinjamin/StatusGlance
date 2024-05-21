@@ -1,8 +1,11 @@
 package com.jaures.statusglanceandroid;
 
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -47,5 +50,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    private void registerBatteryReceiver() {
+        IntentFilter filter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
+        registerReceiver(new BatteryBroadcastReceiver(), filter);
+    }
+    
 }
