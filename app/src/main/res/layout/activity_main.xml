@@ -7,7 +7,7 @@
     android:gravity="center"
     android:padding="16dp">
 
-    <com.jaures.floatingwidgetbatterynetwork.FloatingWidgetView
+    <com.jaures.statusglanceandroid.FloatingWidgetView
         android:id="@+id/floatingWidgetView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />

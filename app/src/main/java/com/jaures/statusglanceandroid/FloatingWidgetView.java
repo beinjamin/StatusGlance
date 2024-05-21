@@ -10,7 +10,7 @@ public class FloatingWidgetView extends LinearLayout {
 
     // Déclaration des TextView pour afficher les informations sur la batterie et le réseau
     private TextView batteryTextView;
-    private Textview networkTextView;
+    private TextView networkTextView;
 
     public FloatingWidgetView(Context context) {
         super(context);
